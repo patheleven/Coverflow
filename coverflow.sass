@@ -1,0 +1,54 @@
+body
+  background: #111
+
+ul
+  list-style: none
+  margin: 3em auto
+  width: 20em
+
+li
+  position: relative
+  display: inline-block
+  -webkit-transform-style: preserve-3d
+  perspective: 400
+  -webkit-perspective: 400
+  perspective-origin: 50% 25%
+  -webkit-perspective-origin: 50% 25%
+
+.left
+  margin-right: -3.5em
+  .image, .reflection
+    transform: rotateY(45deg)
+    -webkit-transform: rotateY(45deg)
+.current
+  margin: 0 2em
+  z-index: 100
+  .image, .reflection
+    transform: none
+    -webkit-transform: none
+.right
+  margin-left: -3.5em
+  .image, .reflection
+    transform: rotateY(-45deg)
+    -webkit-transform: rotateY(-45deg)
+
+.image
+  position: relative
+  z-index: 100
+
+.reflection
+  position: relative
+  z-index: 1
+.reflection img
+  -webkit-transform: scaleY(-1)
+  transform: scaleY(-1)
+  opacity: .5
+.overlay
+  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.40, #111), color-stop(1, rgba(255,255,255,0)))
+  display: inline
+  position: absolute
+  top: 0px
+  left: 0px
+  width: 78px
+  height: 120px
+
