@@ -2,9 +2,11 @@ body
   background: #111
 
 ul
+  overflow: hidden
   list-style: none
   margin: 3em auto
-  width: 20em
+  width: 21em
+  height: 10em
 
 li
   position: relative
@@ -14,6 +16,7 @@ li
   -webkit-perspective: 400
   perspective-origin: 50% 25%
   -webkit-perspective-origin: 50% 25%
+  -webkit-transition: margin .2s, z-index 0s
 
 .left
   margin-right: -3.5em
@@ -26,11 +29,18 @@ li
   .image, .reflection
     transform: none
     -webkit-transform: none
+  .image
+    top: 1em
+  .reflection
+    top: 1em
 .right
   margin-left: -3.5em
   .image, .reflection
     transform: rotateY(-45deg)
     -webkit-transform: rotateY(-45deg)
+
+.image, .reflection
+  -webkit-transition: -webkit-transform .6s, top .6s
 
 .image
   position: relative
@@ -42,13 +52,14 @@ li
 .reflection img
   -webkit-transform: scaleY(-1)
   transform: scaleY(-1)
-  opacity: .5
 .overlay
-  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.40, #111), color-stop(1, rgba(255,255,255,0)))
+  //background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.40, #111), color-stop(1, rgba(255,255,255,0)))
   display: inline
   position: absolute
   top: 0px
   left: 0px
   width: 78px
   height: 120px
+  background: #111
+  opacity: .6
 
