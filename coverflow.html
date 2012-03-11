@@ -2,32 +2,37 @@
 <head>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script src="coverflow.js" type="text/javascript"></script>
+  <script  type="text/javascript">
+    $(document).ready(function() {
+        $('ul').coverflow();
+        });
+  </script>
   <link type="text/css" rel="stylesheet" href="coverflow.css">
 </head>
 <body>
   <ul>
-    <li class='left'>
+    <li>
       <img src='images/beach.png'/>
     </li>
-    <li class='left'>
+    <li>
       <img src='images/mountains.png'/>
     </li>
-    <li class='left'>
+    <li>
       <img src='images/road trip.png'/>
     </li>
-    <li class='current'>
+    <li>
       <img src='images/climbing.png'/>
     </li>
-    <li class='right'>
+    <li>
       <img src='images/cycling.png'/>
     </li>
-    <li class='right'>
+    <li>
       <img src='images/hiking.png'/>
     </li>
-    <li class='right'>
+    <li>
       <img src='images/surfing.png'/>
     </li>
-    <li class='right'>
+    <li>
       <img src='images/wildlife.png'/>
     </li>
   </ul>

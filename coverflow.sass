@@ -5,8 +5,6 @@ ul
   overflow: hidden
   list-style: none
   margin: 3em auto
-  width: 21em
-  height: 10em
 
 li
   position: relative
@@ -20,26 +18,30 @@ li
 
 .left
   margin-right: -3.5em
-  width: 4.3em
-  .image, .reflection
+  .image
     transform: rotateY(45deg)
     -webkit-transform: rotateY(45deg)
+  .reflection
+    -webkit-transform: rotateY(45deg) scaleY(-1)
+    transform: rotateY(45deg) scaleY(-1)
 .current
   margin: 0 2em
   z-index: 100
-  .image, .reflection
-    transform: none
-    -webkit-transform: none
   .image
     top: 1em
+    transform: none
+    -webkit-transform: none
   .reflection
-    top: 1em
+    -webkit-transform: scaleY(-1)
+    transform: scaleY(-1)
 .right
   margin-left: -3.5em
-  width: 4.3em
-  .image, .reflection
+  .image
     transform: rotateY(-45deg)
     -webkit-transform: rotateY(-45deg)
+  .reflection
+    -webkit-transform: rotateY(-45deg) scaleY(-1)
+    transform: rotateY(-45deg) scaleY(-1)
 
 .image, .reflection
   -webkit-transition: -webkit-transform .6s, top .6s
@@ -51,17 +53,6 @@ li
 .reflection
   position: relative
   z-index: 1
-.reflection img
-  -webkit-transform: scaleY(-1)
-  transform: scaleY(-1)
 .overlay
-  //background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.40, #111), color-stop(1, rgba(255,255,255,0)))
-  display: inline
-  position: absolute
-  top: 0px
-  left: 0px
-  width: 78px
-  height: 120px
-  background: #111
-  opacity: .6
+  background: rgba(0, 0, 0, 0.5)
 
