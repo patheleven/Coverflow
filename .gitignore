@@ -1,3 +1,5 @@
 coverflow.js
 coverflow.css
 .sass-cache/
+node_modules/
+spec/*.js

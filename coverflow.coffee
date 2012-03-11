@@ -1,4 +1,4 @@
-jQuery.fn.coverflow = ->
+$.fn.coverflow = ->
   newImageSelected = ->
     if $(this).hasClass('right')
       $('.current').removeClass('current').addClass('left')
